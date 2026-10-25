@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ViralKit AI – Create Better Content. Faster.</title>
+<meta name="description" content="Free creator toolkit for Indian creators: Reel scripts, hooks, YouTube titles, captions, hashtags and more in Hindi, Hinglish and English. Template-based, no sign-up.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0e1220">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ViralKit AI – Create Better Content. Faster.">
+<meta property="og:description" content="12 free, template-based content tools for Indian creators. No account, no API keys.">
+<meta property="og:image" content="icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+<script>(function(){try{var t=JSON.parse(localStorage.getItem('vk_theme'));if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.dataset.theme='dark'}catch(e){}})()</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="app">
+  <aside class="sb" id="sb" aria-label="Sidebar">
+    <a class="brand" href="#/" aria-label="ViralKit AI home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><path d="M8 10l8 13 8-13" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="8" r="2" fill="#fff"/></svg>
+      <span>ViralKit<b>AI</b></span>
+    </a>
+    <nav class="sbn" aria-label="Main">
+      <a href="#/" data-nav="home"><i data-ic="grid"></i>Dashboard</a>
+      <a href="#/saved" data-nav="saved"><i data-ic="star"></i>Saved<em id="savedCount" hidden></em></a>
+      <a href="#/history" data-nav="history"><i data-ic="clock"></i>History</a>
+      <a href="#/about" data-nav="about"><i data-ic="info"></i>About &amp; Privacy</a>
+    </nav>
+    <div class="sbt" id="sbTools"></div>
+    <div class="sbf"><i data-ic="shield" data-s="16"></i><span>Local template engine.<br>No hosted AI. No tracking.</span></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <div class="mainw">
+    <header class="top">
+      <button class="ib menu" id="menuBtn" type="button" aria-label="Open menu"><i data-ic="menu"></i></button>
+      <a class="brand sm" href="#/" aria-label="Home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#lg)"/><path d="M8 10l8 13 8-13" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <label class="srch"><span class="sr">Search tools</span><i data-ic="search" data-s="18"></i><input id="q" type="search" placeholder="Search tools" autocomplete="off"><kbd>/</kbd></label>
+      <button class="ib" id="themeBtn" type="button" aria-label="Toggle dark or light theme"><i data-ic="moon" id="themeIc"></i></button>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div id="view-home" class="view">
+        <div class="ph"><div><h1>Dashboard</h1><p>Pick a tool and generate in seconds.</p></div></div>
+        <div class="card pad wel" id="welcome" hidden><div><h2>Welcome to ViralKit AI</h2><p>Choose a tool, enter your topic, press Generate. Edit, copy or save what you like.</p></div><button class="btn sm" type="button" data-act="hidewel"><span>Got it</span></button></div>
+        <div class="stats" id="stats"></div>
+        <section id="recentSec" hidden><h2 class="sh">Continue</h2><div class="rec" id="recent"></div></section>
+        <div id="grid"></div>
+        <p id="noTools" class="empty" hidden>No tools match your search.</p>
+      </div>
+      <div id="view-tool" class="view" hidden></div>
+      <div id="view-saved" class="view" hidden></div>
+      <div id="view-history" class="view" hidden></div>
+      <div id="view-about" class="view" hidden>
+        <div class="ph"><div><h1>About &amp; Privacy</h1><p>How ViralKit AI works and what it stores.</p></div></div>
+        <div class="steps">
+          <div class="card pad"><span class="n">1</span><b>Pick a tool</b><p>12 tools, searchable.</p></div>
+          <div class="card pad"><span class="n">2</span><b>Set options</b><p>Language, tone, audience.</p></div>
+          <div class="card pad"><span class="n">3</span><b>Edit &amp; save</b><p>Copy, download or star.</p></div>
+        </div>
+        <div class="card pad note"><h2>Templates, not AI</h2>
+          <p>Content is built from local templates and rules in your browser. No hosted AI model is used. Treat results as drafts. Nothing can guarantee that content goes viral. A real AI provider can be added later through the <code>Providers</code> layer in <code>app.js</code>.</p></div>
+        <h2 class="sh">FAQ</h2>
+        <details><summary>Is this real AI?</summary><p>No. It uses local templates and rules.</p></details>
+        <details><summary>Do I need an account or API key?</summary><p>No.</p></details>
+        <details><summary>Does it work offline?</summary><p>After one successful online visit in a browser that supports service workers, yes. The first visit needs internet.</p></details>
+        <details><summary>Are hashtags based on trends?</summary><p>No. They come from your topic and common categories, not live data.</p></details>
+        <details><summary>Is it free?</summary><p>Yes. Hosting or a custom domain may cost the site owner money.</p></details>
+        <h2 class="sh">Legal &amp; contact</h2>
+        <div class="card pad"><p><a href="#/privacy">Privacy Policy</a> · <a href="#/terms">Terms of Use</a> · <a class="cl" href="mailto:adityapalvertex@gmail.com">adityapalvertex@gmail.com</a></p></div>
+      </div>
+
+      <div id="view-privacy" class="view legal" hidden>
+        <div class="ph"><div><h1>Privacy Policy</h1><p>Last updated: 25 October 2026</p></div></div>
+        <div class="card pad">
+          <h2>Summary</h2><p>ViralKit AI has no accounts, no ads and no analytics or tracking scripts. What you type is processed in your browser and is not sent to any server by this app.</p>
+          <h2>What is stored on your device</h2>
+          <ul><li>Your theme choice and last-used options (language, platform, tone, audience).</li><li>Your recent history (up to 30 generations) and saved items.</li><li>A counter of how many generations you made.</li></ul>
+          <p>This uses your browser's local storage. It never leaves your device through this app. You can remove it with <b>Clear history</b>, <b>Remove all</b> on the Saved page, or by clearing your browser's site data. If storage is blocked, the app still works but forgets everything when you close the tab.</p>
+          <h2>Offline cache</h2><p>The app may save its own files in your browser so it can open offline. These files contain no personal data.</p>
+          <h2>Hosting</h2><p>The company that hosts this website may keep standard server logs, such as IP address and request time. This is outside the control of the app.</p>
+          <h2>Children</h2><p>The app does not knowingly collect any information from anyone, including children.</p>
+          <h2>Changes and contact</h2><p>If this policy changes, the date above will change. Questions: <a class="cl" href="mailto:adityapalvertex@gmail.com">adityapalvertex@gmail.com</a></p>
+        </div>
+      </div>
+      <div id="view-terms" class="view legal" hidden>
+        <div class="ph"><div><h1>Terms of Use</h1><p>Last updated: 25 October 2026</p></div></div>
+        <div class="card pad">
+          <h2>Using the service</h2><p>ViralKit AI is a free tool that builds draft content from local templates and rules. It does not use a hosted AI model. By using it, you agree to these terms.</p>
+          <h2>Your content</h2><p>You are responsible for what you publish. Review and personalise every result, and make sure it is accurate, lawful and suitable for your audience and platform. Results are generated from templates, so other people may receive similar text.</p>
+          <h2>No guarantees</h2><p>Nothing here guarantees views, followers, sales or virality. Hashtags are not based on live trend data. Translation and transliteration are approximate.</p>
+          <h2>Availability and warranty</h2><p>The service is provided "as is" and "as available", without warranties of any kind. It may change or be unavailable at any time. To the extent the law allows, the owner is not liable for losses arising from its use.</p>
+          <h2>Acceptable use</h2><p>Do not use the tool to create content that is unlawful, deceptive, hateful or infringes the rights of others.</p>
+          <h2>Contact</h2><p><a class="cl" href="mailto:adityapalvertex@gmail.com">adityapalvertex@gmail.com</a></p>
+        </div>
+      </div>
+    </main>
+    <footer class="ft"><span>© <span id="yr"></span> ViralKit AI</span><nav aria-label="Footer"><a href="#/privacy">Privacy</a><a href="#/terms">Terms</a><a href="#/about">About</a><a class="cl" href="mailto:adityapalvertex@gmail.com">Contact</a></nav></footer>
+  </div>
+</div>
+
+<nav class="bn" aria-label="Primary">
+  <a href="#/" data-nav="home"><i data-ic="grid"></i>Home</a>
+  <a href="#/saved" data-nav="saved"><i data-ic="star"></i>Saved</a>
+  <a href="#/history" data-nav="history"><i data-ic="clock"></i>History</a>
+  <a href="#/about" data-nav="about"><i data-ic="info"></i>About</a>
+</nav>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
